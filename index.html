@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/vddp/Villa-Chiericati">View on GitHub</a>
 
           <h1 id="project_title">Villa Chiericati</h1>
-          <h2 id="project_tagline"></h2>
+          <h2 id="project_tagline">a PLaSM 3D Model of Villa Chiericati <br>Valerio Domenico Di Paolo, matr. 261921</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/vddp/Villa-Chiericati/zipball/master">Download this project as a .zip file</a>
@@ -31,32 +31,96 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        
+<h1>Villa Chiericati, designed by Andrea Palladio</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Villa Chiericati (also known as Villa Chiericati-Rigo) is a villa at Vancimuglio in the Veneto, northern Italy. It was designed for Giovanni Chiericati by the architect <strong>Andrea Palladio</strong> in the early 1550s. Palladio also designed the family's town house Palazzo Chiericati in Vicenza.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h6>In 1996 UNESCO included the villa in the World Heritage Site City of Vicenza and the Palladian Villas of the Veneto.</h6>
+<p><img src="resources/photos/Villa_Chiericati_front.jpg" alt="Villa_Chiericati_front"></p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2>Architectural details</h2>
+<p>The villa is square. A portico projects from its principal facade. (This was the first time a temple pronaos had been incorporated into a villa's design). The principal rooms are built upon a piano nobile above a semi-basement. The upper floor is very much of secondary importance. The design of the villa was to be the prototype for Palladio's later works at the Villa Rotonda and the Villa Malcontenta.</p>
 
-<h3>Designer Templates</h3>
+<p><img src="resources/photos/Villa_Chiericati_right_side.jpg" alt="Villa_Chiericati_right_side"></p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>Historical notes</h2>
+<p>Work on the villa stopped after the death of Palladio's client. It was not finally completed until after it had been purchased by Ludovico Porto in 1574. In 1584 he employed the architect Domenico Groppino, who had collaborated with Palladio on other projects, to complete the villa.
 
-<h3>Rather Drive Stick?</h3>
+There is some debate as to the extent Groppino influenced the eventual design of the building. While the portico is undoubtedly by the hand of Palladio himself, the position of the windows is at variance with the architect's own advice in I Quattro Libri dell'Architettura, where he warns against placing windows near the corner of a building lest it weaken the structure (the villa does in fact reveal signs of settlement here).</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h2>Plan and cross section</h2>
+<h3>Plans used as reference materials, by Ottavio Bertotti Scamozzi, 1781<h3>
+<p><img src="resources/photos/Villa_Chiericati_plans.jpg" alt="Villa_Chiericati_plans"></p>
 
-<h3>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
-<h3>Support or Contact</h3>
+<h1>The Project</h1>
+<p>The project, developed for the final exam of the <a href="http://www.dia.uniroma3.it/~paoluzzi/web/did/graficacomp/2012/">Computational Graphics course</a>, consists in the generation of the 3D Model of the Andrea Palladio's "Villa Chiericati". The project uses the <a href="https://github.com/cvdlab/plasm.js">Plasm.js</a> platform framework and runs on Google Chrome web browser.</p>
+<p>The project source code is hosted on GitHub <a href="https://github.com/cvdlab-cg/261921/blob/master/final-project/Villa_Chiericati.js">here</a></p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h2>Working process</h2>
+<p>At first I have spent some time to examine the plan and the cross section and to gather photographic documentation in order to completely understand the structure of the building.</p>
+<p>For generate such a complex building it's necessary to divide it into hierarchical parts, after it's necessary to choose some reference parts and start the modeling work with those. The model was splitted into pieces modeled independently. After a careful planning for a design idea I have chosen to decompose the building in four hierarchical parts</p>
+
+<h2>Model decomposition</h2>
+<p>The Villa, for it's construction, was divided into distinct tiers, representing the hierarchical parts:
+  <ul>
+    <li> The basement</li>
+    <li> The main floor, the external walls and the ceiling</li>
+    <li> The roof and some complex parts such archs and covering elements</li>
+    <li> The decorative elements</li>
+  </ul>
+This subdivision express a iterative way of work, in fact the building follows a bottom-up approach: from the simplest elements to the complexes ones.</p>
+<p>For all the hierarchical tiers were used all the operators and functions used during the course, "squared" elements were modeled with the <code>SIMPLEX_GRID</code> primitive while curved surfaces and solids were made with transfinite Bezier <code>BEZIER</code> and transfinite Hermite <code>CUBIC_HERMITE</code> mapped on appropriate domains. Moreover the affine transformations Translate <code>TRANSLATE(dims)(values)(object)</code>, Scale <code>SCALE(axis)(values)(object)</code> and Rotate <code>ROTATE(dims)(angle)(object)</code> were used for the building and the placement of all the decorative elements.</p>
+<p>The project source code is hosted on GitHub <a href="https://github.com/cvdlab-cg/261921/blob/master/final-project/Villa_Chiericati.js">here</a></p>
+
+<h2>Preparatory work</h2>
+<p>I have made some preparatory sketches og some elements modeled, with measures and references in order to proceed with a clear schema of the item to construct</p>
+<p><img src="resources/sketches/vddp_sketches.jpg" alt="vddp_sketches"></p>
+<p>For the complexest elements, for example in which more than one bezier curves should be used, I found very useful to prepare a rough sketch of the part to model</p>
+<p><img src="resources/sketches/sketch_compared_with_snapshot.jpg" alt="sketch_compared_with_snapshot"></p>
+
+<h2>Construction</h2>
+<p>I have used the fact that the Villa is symmetric about the <strong>yz-plane</strong>, it has given the possibility to construct a section of the model that should be reflected with the affine <code>SCALE</code> transformation in order to obtain the complete model. Moreover this choice allows to visualize a cross section of the constructed item, which gives important visual reference.</p>
+<h6>The screenshoots inserted below shows the different phases of construction of the model.</h6>
+
+<h5>The basement</h5>
+<p><img src="resources/snapshots/Villa_lv1.jpg" alt="Villa_lv1"></p>
+
+<h5>The basement and the main storey, composed by the external walls and the ceiling</h5>
+<p><img src="resources/snapshots/Villa_lv2.jpg" alt="Villa_lv2"></p>
+
+<h5>The roof and some covering elements were added in the third phase of construction</h5>
+<p><img src="resources/snapshots/Villa_lv3.jpg" alt="Villa_lv3"></p>
+
+<h2>The final result</h2>
+
+<h5>Close up of the complete model of Villa Chiericati</h5>
+<p><img src="resources/snapshots/Villa_lv5_complete.jpg" alt="Villa_lv5_complete"></p>
+
+<h5>The model complete, view from the x, y and z axis</h5>
+<p><img src="resources/snapshots/Villa_lv4_xyz.jpg" alt="Villa_lv4_xyz"></p>
+
+<h5>Front view of the complete model</h5>
+<p><img src="resources/snapshots/Villa_lv5_front.jpg" alt="Villa_lv5_front"></p>
+<br>
+<hr>
+
+<h4>References</h4>
+<p>Some resources in this site are taken from the web sites listed below and rights belong to their respective owners.<br>
+<a href="http://en.wikipedia.org/wiki/Villa_Chiericati">http://en.wikipedia.org/wiki/Villa_Chiericati</a><br>
+<a href="http://www.unav.es/ha/006-VILL/pall-vill-peq.htm">http://www.unav.es/ha/006-VILL/pall-vill-peq.htm</a><br>
+</p>
+
+<br>
+
+<blockquote>
+  <p>"There is something comparable to the power of a great poet [in Palladio’s architecture] who,<br> 
+  out of the worlds of truth and falsehood,<br> creates a third whose borrowed existence enchants us."<br>
+  <em>J. W. Goethe</em></p>
+</blockquote>
+        
       </section>
     </div>
 
